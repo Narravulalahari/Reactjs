@@ -1,0 +1,89 @@
+import React from 'react';
+import index from './index.css';
+import data from './data';
+console.log(data)
+const App=() =>{
+  return (
+   <main className='container'>
+    <ul className='comments-container'>
+      {data.map((eachComment)=>{
+        const {id,email,name,body}=eachComment
+        return (
+          <Listitem id={id} email={email} name={name} body={body}/>
+        )
+        //   return <li className="comment">
+        //     <div className='comment-header'>
+        //       <h3 className='email'>{email}</h3>
+        //       <h3 className='name'>{name}</h3>
+             
+        //     </div>
+        //     <h3 className='message'>{body}</h3>
+        //   </li>
+        // })
+      }
+      /* <li className='comment'>
+        <div className='comment-header'>
+          <h3 className='email'>email@gmail.com</h3>
+          <h3 className='name'>some name random</h3>
+        </div>
+        <p className='message'>
+        We are living in the information age means actually living in the data age.
+Metabytes , petabytes of data pour in computer networks, world wide web and various data
+storage devices every day.. from business, society, Science and Engineering , Medicine &
+almost every other aspect of daily life..
+        </p>
+     
+      </li> */
+    </ul>
+
+   </main>
+  // )
+};
+const Listitem=(props)=>{
+  const {id,email,name,body}=props
+  return <li className="comment">
+  <div className='comment-header'>
+    <h3 className='email'>{email}</h3>
+    <h3 className='name'>{name}</h3>
+   
+  </div>
+  <h3 className='message'>{body}</h3>
+</li>
+
+}
+
+export default App
+################
+import React from 'react';
+import index from './index.css';
+import data from './data';
+console.log(data)
+const App=() =>{
+  return (
+   <main className='container'>
+    <ul className='comments-container'>
+      {data.map((eachComment)=>{
+        const {id,email,name,body}=eachComment
+        return (
+          <Listitem id={id} email={email} name={name} body={body}/>
+        );
+      })}
+      </ul>
+      </main>
+  )
+    }
+    const Listitem=(props)=>{
+      const {id,email,name,body}=props
+      return <li className="comment">
+      <div className='comment-header'>
+        <h3 className='email'>{email}</h3>
+        <h3 className='name'>{name}</h3>
+       
+      </div>
+      <h3 className='message'>{body}</h3>
+    </li>
+    
+    }
+    
+    export default App
+

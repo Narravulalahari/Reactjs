@@ -1,0 +1,25 @@
+import React,{useState} from 'react';
+const Index=()=>{
+    // const Intialobj={
+    //     // firstname:"praveena",
+    //     // lastname:"narravula"
+    // };
+    const [first,setfirst]=useState("pravee")
+    const [last,setlast]=useState("narrab")
+    const changefname=()=>{
+        setfirst("laha")
+    };
+    const changelname=()=>{
+        setlast("narravu")
+    }
+    return (
+      <div>
+        <h1>my name is {first}</h1>
+        <button onClick={changefname}>change fname</button>
+        <h1>my name is {last}</h1>
+        <button onClick={changelname}>change lname</button>
+
+
+      </div>
+    )
+}
